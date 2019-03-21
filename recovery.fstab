@@ -15,7 +15,7 @@
 #
 
 /boot emmc /dev/block/bootdevice/by-name/boot
-/data f2fs /dev/block/bootdevice/by-name/userdata wait,check,formattable,encryptable=/dev/block/bootdevice/by-name/metadata
+/data f2fs /dev/block/bootdevice/by-name/userdata formattable;length=-16384;wipeingui;encryptable=/dev/block/bootdevice/by-name/metadata
 /system ext4 /dev/block/bootdevice/by-name/system
 /cache ext4 /dev/block/bootdevice/by-name/cache
 /misc emmc /dev/block/bootdevice/by-name/misc
